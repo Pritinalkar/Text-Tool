@@ -42,28 +42,36 @@
     }
     .button{
         margin-top: 100px;
-      font-style: oblique;
+        font-style: oblique;
       
     }
     .button:hover{
         font-size: larger;
         border-radius: 20px;
     }
+    .result{
+        color: aliceblue;
+        text-align: center;
+    }
 </style>
 <body >
     <div class="body">
     <h1 class="app-title">Text Tool</h1>
-    <input class="input-box"/>
+    <input class="input-box" id="input-box"/>
     <p id="result" class="result"></p>
     <div class="buttons-container">
-    <button class="button">UPPERCASE</button>
+    <button class="button" onclick="makeUpperCase()">UPPERCASE</button>
     <button class="button">lowercase</button>
     <button class="button">Character count</button>
     <button class="button">Word count</button>
     </div>
     </div>
     <script>
-        
+        const inputElement = document.getElementById("input-box")
+        const resultElement = document.getElementById("result")
+        function makeUpperCase(){
+            resultElement.innerText = inputElement.value.toUpperCase()
+        }
     </script>
 </body>
 </html>
