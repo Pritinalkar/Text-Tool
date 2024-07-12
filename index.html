@@ -61,7 +61,7 @@
     <p id="result" class="result"></p>
     <div class="buttons-container">
     <button class="button" onclick="makeUpperCase()">UPPERCASE</button>
-    <button class="button">lowercase</button>
+    <button class="button" onclick="makeLowerCase()">lowercase</button>
     <button class="button">Character count</button>
     <button class="button">Word count</button>
     </div>
@@ -72,6 +72,10 @@
         function makeUpperCase(){
             resultElement.innerText = inputElement.value.toUpperCase()
         }
+        function makeLowerCase(){
+            resultElement.innerText = inputElement.value.toLowerCase()
+        }
+
     </script>
 </body>
 </html>
